@@ -12,11 +12,14 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  skip: true  # [py<38]
+  skip: True  # [py<38]
+  # bazel is not available on linux-s390x
+  skip: True  # [s390x]
 
 requirements:
   build:
     - bazel >=6.4.0,<7
+    - protobuf >=3.20.2,<5.0.0.dev0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
