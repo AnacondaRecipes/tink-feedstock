@@ -53,7 +53,17 @@ about:
   home: https://github.com/tink-crypto/tink-py
   summary: A multi-language, cross-platform library that provides cryptographic APIs that are secure, easy to use correctly, and hard(er) to misuse.
   license: Apache-2.0
+  license_family: Apache
   license_file: LICENSE
+  doc_url: https://developers.google.com/tink
+  dev_url: https://github.com/tink-crypto/tink-py
+  description: |
+    Using crypto in your application shouldn't have to feel like juggling chainsaws in the dark.
+    Tink is a crypto library written by a group of cryptographers and security engineers at Google. 
+    It was born out of our extensive experience working with Google's product teams, fixing weaknesses in implementations, and providing simple APIs that can be used safely without needing a crypto background.
+    Tink provides secure APIs that are easy to use correctly and hard(er) to misuse. 
+    It reduces common crypto pitfalls with user-centered design, careful implementation and code reviews, and extensive testing. 
+    At Google, Tink is one of the standard crypto libraries, and has been deployed in hundreds of products and systems.
 
 extra:
   recipe-maintainers:
