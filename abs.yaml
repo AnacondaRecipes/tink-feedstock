@@ -1,0 +1,5 @@
+upload_channels:
+  - sfe1ed40
+
+channels:
+  - https://staging.continuum.io/prefect/fs/google-cloud-kms-feedstock/pr2/cc46326  # google-cloud-kms
