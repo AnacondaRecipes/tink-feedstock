@@ -1,0 +1,31 @@
+From a43663ae6a1d5a9f55df6ca19ad2c9f6e1bc0a34 Mon Sep 17 00:00:00 2001
+From: Andrii Osipov <aosipov@anaconda.com>
+Date: Thu, 27 Feb 2025 11:59:16 -0800
+Subject: [PATCH] add dynamic_lookup
+
+---
+ tink/cc/pybind/BUILD.bazel | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/tink/cc/pybind/BUILD.bazel b/tink/cc/pybind/BUILD.bazel
+index 00120c6..a99a438 100644
+--- a/tink/cc/pybind/BUILD.bazel
++++ b/tink/cc/pybind/BUILD.bazel
+@@ -265,6 +265,14 @@ pybind_extension(
+     name = "tink_bindings",
+     srcs = ["tink_bindings.cc"],
+     deps = _PYBIND_EXTENSION_DEPS,
++    copts = select({
++        "@platforms//os:macos": ["-undefined", "dynamic_lookup"],
++        "//conditions:default": [],
++    }),
++    linkopts = select({
++        "@platforms//os:macos": ["-undefined", "dynamic_lookup"],
++        "//conditions:default": [],
++    }),
+ )
+ 
+ genrule(
+-- 
+2.39.3 (Apple Git-146)
+
