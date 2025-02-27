@@ -1,0 +1,41 @@
+From defba6aab13bf6dde4d0469788f6410505e0279e Mon Sep 17 00:00:00 2001
+From: Andrii Osipov <aosipov@anaconda.com>
+Date: Thu, 27 Feb 2025 12:17:44 -0800
+Subject: [PATCH] update pybind11 version
+
+---
+ tink_py_deps.bzl | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/tink_py_deps.bzl b/tink_py_deps.bzl
+index a3c70f2..89286b0 100644
+--- a/tink_py_deps.bzl
++++ b/tink_py_deps.bzl
+@@ -39,18 +39,18 @@ def tink_py_deps():
+         http_archive,
+         name = "pybind11",
+         build_file = "@pybind11_bazel//:pybind11.BUILD",
+-        sha256 = "d475978da0cdc2d43b73f30910786759d593a9d8ee05b1b6846d1eb16c6d2e0c",
+-        strip_prefix = "pybind11-2.11.1",
+-        urls = ["https://github.com/pybind/pybind11/archive/v2.11.1.tar.gz"],
++        sha256 = "e08cb87f4773da97fa7b5f035de8763abc656d87d5773e62f6da0587d1f0ec20",
++        strip_prefix = "pybind11-2.13.6",
++        urls = ["https://github.com/pybind/pybind11/archive/refs/tags/v2.13.6.tar.gz"],
+     )
+ 
+     # Release from 2023-08-11
+     maybe(
+         http_archive,
+         name = "pybind11_bazel",
+-        sha256 = "e8355ee56c2ff772334b4bfa22be17c709e5573f6d1d561c7176312156c27bd4",
+-        strip_prefix = "pybind11_bazel-2.11.1",
+-        url = "https://github.com/pybind/pybind11_bazel/archive/refs/tags/v2.11.1.tar.gz",
++        sha256 = "cae680670bfa6e82703c03f2a3c995408cdcbf43616d7bdd198ef45d3c327731",
++        strip_prefix = "pybind11_bazel-2.13.6",
++        url = "https://github.com/pybind/pybind11_bazel/archive/refs/tags/v2.13.6.tar.gz",
+     )
+ 
+     # Release from 2023-09-18
+-- 
+2.39.3 (Apple Git-146)
+

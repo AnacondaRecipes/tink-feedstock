@@ -9,7 +9,8 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tink-{{ version }}.tar.gz
   sha256: 43cf7dd1e77c3c55538083cd416c5c6f1958d601eaf11d8997d0d60f24f90653
   patches:
-    - 0001-add-dynamic_lookup.patch
+    #- 0001-add-dynamic_lookup.patch
+    - 0001-update-pybind11-version.patch
 
 build:
   number: 0
