@@ -19,8 +19,8 @@ attrib -R /S /D %BUILD_PREFIX%
 ::@for %%G in  ("%SRC_DIR%") DO @SET DRIVE=%%~dG
 ::bazel "--output_base=%DRIVE%\O" clean --expunge
 ::bazel "--output_base=%DRIVE%\O" shutdown
-bazel clean --expunge
-bazel shutdown
+::bazel clean --expunge
+::bazel shutdown
 
 :: WARNING conda.gateways.disk.delete:unlink_or_rename_to_trash(184): Could not remove or rename _build_env\Library\lib\modules.  Please remove this file manually (you may need to reboot to free file handles)
 rmdir /S "%BUILD_PREFIX%\Library\lib\modules"
