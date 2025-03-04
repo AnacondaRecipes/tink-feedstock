@@ -1,7 +1,7 @@
 From 9ee739612e9ae926ee985bc79adafb43ab42c872 Mon Sep 17 00:00:00 2001
 From: Lorenzo Pirritano <lpirritano@anaconda.com>
 Date: Mon, 3 Mar 2025 17:18:54 +0100
-Subject: [PATCH] add max_idle_secs to bazel startup args for win
+Subject: [PATCH 1/2] add max_idle_secs to bazel startup args for win
 
 ---
  setup.py | 2 ++
