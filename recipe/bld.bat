@@ -12,7 +12,12 @@ echo Using Python: %PYTHON%
 :: Python settings
 set PYTHON_BIN_PATH="%PYTHON%"
 set PYTHON_LIB_PATH="%SP_DIR%"
-set PYTHON_VERSION=%PY_VER%
+set PYTHON_VERSION="%PY_VER%"
+set BAZEL_SH="%LIBRARY_PREFIX%\usr\bin\bash.exe"
+set BAZEL_PYTHON="%PYTHON%"
+set PYTHON="%PYTHON%"
+set SP_DIR="%SP_DIR%"
+set SRC_DIR="%SRC_DIR%"
 
 %PYTHON% -m pip install . --no-deps --no-build-isolation -vv
 
